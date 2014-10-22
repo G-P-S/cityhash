@@ -19,3 +19,4 @@ gopro_glob(${PROJ_UPPER}_HEADERS *.h .)
 
 add_gopro_library(${PROJ_NAME})
 
+add_subdirectory(testcity128)
