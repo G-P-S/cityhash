@@ -76,19 +76,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)_vs2013\</OutDir>
+    <OutDir>$(ProjectDir)$(Configuration)_vs2013\</OutDir>
     <IntDir>$(Configuration)_vs2013\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)_2013\</OutDir>
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)_2013\</OutDir>
     <IntDir>$(Platform)\$(Configuration)_2013\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)_vs2013\</OutDir>
+    <OutDir>$(ProjectDir)$(Configuration)_vs2013\</OutDir>
     <IntDir>$(Configuration)_vs2013\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)_2013\</OutDir>
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)_2013\</OutDir>
     <IntDir>$(Platform)\$(Configuration)_2013\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
