@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(GoProCommon)
 
-add_definitions(-D_BSD_SOURCE -DLINUX)
+add_definitions(-D_BSD_SOURCE)
 
 set(PROJ_NAME CityHash)
 string(TOUPPER ${PROJ_NAME} PROJ_UPPER)
