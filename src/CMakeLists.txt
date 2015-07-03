@@ -1,21 +1,26 @@
 cmake_minimum_required(VERSION 2.8)
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-include(GoProCommon)
+list(APPEND CMAKE_MODULE_PATH ${GOPRO_TOOLS_DIR}/cmake)
+include("${GOPRO_TOOLS_DIR}/cmake/gopro.cmake")
 
-add_definitions(-D_BSD_SOURCE)
+gopro_setup()
+gopro_project(CityHash)
 
-set(PROJ_NAME CityHash)
-string(TOUPPER ${PROJ_NAME} PROJ_UPPER)
-project(${PROJ_NAME})
+gopro_begin_module(CityHash)
+include_directories(.)
+gopro_dir(. GROUP src)
+gopro_files(
+    city.cc
+)
+set(HEADERS
+    city.h
+    citycrc.h
+    config.h
+)
+gopro_dir(. GROUP include)
+gopro_files(${HEADERS})
+gopro_public_headers(include ${HEADERS})
+gopro_public_header_dir(.)
+gopro_end_module()
 
-set(${PROJ_UPPER}_LIBRARY_TYPE SHARED STATIC)
-
-set(${PROJ_UPPER}_INCLUDE_DIRS
-    ${CMAKE_CURRENT_SOURCE_DIR}
-   )
-
-gopro_glob(${PROJ_UPPER}_SOURCES *.cc .)
-gopro_glob(${PROJ_UPPER}_HEADERS *.h .)
-
-add_gopro_library(${PROJ_NAME})
+gopro_finish()
 
