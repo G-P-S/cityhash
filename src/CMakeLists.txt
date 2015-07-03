@@ -5,7 +5,7 @@ include("${GOPRO_TOOLS_DIR}/cmake/gopro.cmake")
 gopro_setup()
 gopro_project(CityHash)
 
-gopro_begin_module(CityHash)
+gopro_begin_lib(CityHash)
 include_directories(.)
 gopro_dir(. GROUP src)
 gopro_files(
@@ -20,7 +20,7 @@ gopro_dir(. GROUP include)
 gopro_files(${HEADERS})
 gopro_public_headers(include ${HEADERS})
 gopro_public_header_dir(.)
-gopro_end_module()
+gopro_end_lib()
 
 gopro_finish()
 
