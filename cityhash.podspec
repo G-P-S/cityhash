@@ -75,7 +75,7 @@ git repository containing a copy of Google's cityhash library
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-s.source       = { :git => "https://github.com/G-P-S/cityhash.git", :branch => "gopro-cityhash" }
+s.source       = { :git => "git@github.com:G-P-S/cityhash.git", :branch => "gopro-cityhash" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
