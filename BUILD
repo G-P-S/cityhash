@@ -11,6 +11,7 @@ cc_library(
     copts = [],
     deps = [],
     defines = ["_BSD_SOURCE"],
+    includes = ["./src"],
     visibility = ["//visibility:public"],
 )
 
