@@ -5,19 +5,14 @@ include("${GOPRO_TOOLS_DIR}/cmake/gopro.cmake")
 gopro_init(cityhash)
 
 gopro_begin_lib(cityhash GROUP 3rdparty)
-include_directories(src)
-gopro_dir(src)
-gopro_files(
-    city.cc
-)
-set(HEADERS
+gopro_public_include_dirs(src)
+gopro_public_headers(DIR src INSTALL_DIR include
     city.h
     citycrc.h
     config.h
 )
-gopro_dir(src GROUP include)
-gopro_files(${HEADERS})
-gopro_public_headers(include ${HEADERS})
-gopro_public_header_dir(src)
+gopro_files(DIR src
+    city.cc
+)
 gopro_end_lib()
 
