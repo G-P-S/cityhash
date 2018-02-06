@@ -17,11 +17,11 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              # Associated headers in the same location as their source
              # file are automatically included.
-             src/main/cpp/cityhash/src/city.cc
-             src/main/cpp/cityhash/src/city.h
-             src/main/cpp/cityhash/src/citycrc.h
-             src/main/cpp/cityhash/src/config.h
+             ../src/city.cc
+             ../src/city.h
+             ../src/citycrc.h
+             ../src/config.h
            )
 
 # the header files are included in these directories
-include_directories( src/main/cpp/cityhash/src )
+include_directories( ../src )
